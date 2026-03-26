@@ -1,14 +1,16 @@
 
-var express      = require('express');
-var path         = require('path');
-var favicon      = require('serve-favicon');
-var logger       = require('morgan');
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-const helmet     = require('helmet');
-var moment       = require('moment');
+const helmet = require('helmet');
+var moment = require('moment');
 const createSessionMiddleware = require('./lib/middleware/withSession');
 
 var app = express();
+
+app.use(helmet());
 
 // View engine setup
 var handlebars = require('express-handlebars')
@@ -28,8 +30,8 @@ app.set('db_model', require('./lib/model/db'));
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
