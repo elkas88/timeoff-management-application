@@ -1,7 +1,7 @@
 
 'use strict';
 
-var test                 = require('selenium-webdriver/testing'),
+var test                 = { it, describe, before, after, beforeEach, afterEach },
   By                     = require('selenium-webdriver').By,
   register_new_user_func = require('../lib/register_new_user'),
   expect                 = require('chai').expect,

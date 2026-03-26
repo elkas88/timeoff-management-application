@@ -1,7 +1,7 @@
 
 'use strict';
 
-var test             = require('selenium-webdriver/testing'),
+var test             = { it, describe, before, after, beforeEach, afterEach },
     until            = require('selenium-webdriver').until,
     By               = require('selenium-webdriver').By,
     expect           = require('chai').expect,

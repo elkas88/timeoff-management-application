@@ -2,7 +2,7 @@
 
 'use strict';
 
-var test             = require('selenium-webdriver/testing'),
+var test             = { it, describe, before, after, beforeEach, afterEach },
     config           = require('../lib/config'),
     application_host = config.get_application_host(),
     expect           = require('chai').expect,

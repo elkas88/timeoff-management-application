@@ -2,7 +2,7 @@
 'use strict';
 
 const
-  test                   = require('selenium-webdriver/testing'),
+  test                   = { it, describe, before, after, beforeEach, afterEach },
   until                  = require('selenium-webdriver').until,
   register_new_user_func = require('../../lib/register_new_user'),
   open_page_func         = require('../../lib/open_page'),

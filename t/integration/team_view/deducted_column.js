@@ -21,7 +21,7 @@
  *
  * */
 
-var test                 = require('selenium-webdriver/testing'),
+var test                 = { it, describe, before, after, beforeEach, afterEach },
   By                     = require('selenium-webdriver').By,
   Promise                = require("bluebird"),
   expect                 = require('chai').expect,

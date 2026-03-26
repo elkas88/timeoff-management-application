@@ -8,13 +8,12 @@ var By        = require('selenium-webdriver').By,
     until     = require('selenium-webdriver').until,
     expect    = require('chai').expect,
     _         = require('underscore'),
-    uuid      = require('node-uuid'),
     Promise   = require("bluebird"),
     open_page_func       = require('./open_page'),
     build_driver         = require('./build_driver'),
     company_edit_form_id = '#company_edit_form',
     submit_form_func     = require('./submit_form');
-
+const { randomUUID } = require('node:crypto');
 
 var register_new_user_func = Promise.promisify( function(args, callback){
 
@@ -26,7 +25,7 @@ var register_new_user_func = Promise.promisify( function(args, callback){
     new_user_email        = args.user_email || random_token + '@test.com';
 
   // Instantiate new driver object if it not provided as paramater
-  var driver = args.driver || build_driver()
+    var driver = args.driver || build_driver()
 
 
   // Make sure we are in desktop version

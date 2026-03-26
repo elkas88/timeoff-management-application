@@ -3,7 +3,7 @@
 
 
 const
-  test                   = require('selenium-webdriver/testing'),
+  test                   = { it, describe, before, after, beforeEach, afterEach },
   By                     = require('selenium-webdriver').By,
   expect                 = require('chai').expect,
   Promise                = require('bluebird'),

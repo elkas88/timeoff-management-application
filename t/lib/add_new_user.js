@@ -6,12 +6,12 @@ var By        = require('selenium-webdriver').By,
     _         = require('underscore'),
     until     = require('selenium-webdriver').until,
     Promise   = require("bluebird"),
-    uuid      = require('node-uuid'),
     submit_form_func = require('./submit_form'),
     build_driver     = require('./build_driver'),
     add_new_user_form_id = '#add_new_user_form',
     driver;
 
+const { randomUUID } = require('node:crypto');
 
 module.exports = Promise.promisify(function(args, callback){
 

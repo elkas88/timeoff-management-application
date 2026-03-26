@@ -2,7 +2,7 @@
 'use strict';
 
 const
-  test                = require('selenium-webdriver/testing'),
+  test                = { it, describe, before, after, beforeEach, afterEach },
   By                  = require('selenium-webdriver').By,
   until               = require('selenium-webdriver').until,
   Promise             = require("bluebird"),

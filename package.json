@@ -28,6 +28,7 @@
     "morgan": "^1.10.1",
     "nconf": "^0.13.0",
     "nodemailer": "^8.0.4",
+    "nodemailer-smtp-transport": "^2.7.4",
     "passport": "^0.7.0",
     "passport-http-bearer": "^1.0.1",
     "passport-local": "^1.0.0",
@@ -43,6 +44,8 @@
   "devDependencies": {
     "chai": "^6.2.2",
     "mocha": "^11.7.5",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
     "sass": "^1.98.0",
     "selenium-webdriver": "^4.41.0"
   },
