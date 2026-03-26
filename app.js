@@ -4,7 +4,7 @@ var path         = require('path');
 var favicon      = require('serve-favicon');
 var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser   = require('body-parser');
+const helmet     = require('helmet');
 var moment       = require('moment');
 const createSessionMiddleware = require('./lib/middleware/withSession');
 
